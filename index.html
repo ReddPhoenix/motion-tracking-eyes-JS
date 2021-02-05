@@ -24,15 +24,30 @@
 
         [].forEach.call(eyes, function(eye) {});
 
+
         const container = document.querySelector('.container');
 
         container.addEventListener('mousemove', e => {
             const eyes = document.querySelectorAll('.eye');
 
             [].forEach.call(eyes, function(eye) {
-                
-            }
-        })
+                // Mouse position on x-axis
+                let mouseX = eye.getBoundingClientRect().right;
+                // Left eye offset in place of right eye
+                if (eye.classList.contains('eye-left')) {
+                    mouseX = eye.getBoundingClientRect().left;
+                }
+
+                // Vertical offset
+                let mouseY = eye.getBoundingClientRect().top;
+                // Calculate the radian value of the offset between the mouse and the eye
+                let radianDegrees = Math.atan2(e.pageX - mouseX, e.pageY - mouseY);
+                // Convert to degree value to use in CSS
+                let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 +180;
+                // Assign degrees to eye
+                eye.style.transform = `rotate(${rotationDegrees}deg)`;
+            });
+        });
 
 
 
