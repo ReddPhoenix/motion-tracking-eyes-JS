@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mouse Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class='eye eye-left'>
-        <div class="eye-inner"></div>
+    <div class="container">
+        <div class="chicken">
+            <div class="head">
+                <div class="crown">
+                    <div class="crown-p crown-p-one"></div>
+                    <div class="crown-p crown-p-two"></div>
+                    <div class="crown-p crown-p-three"></div>
+                </div>
+                <div class="eye eye-left">
+                    <div class="eye-inner"></div>
+                </div>
+                <div class="eye eye-right">
+                    <div class="eye-inner"></div>
+                </div>
+                <div class="nose"></div>
+            </div>
+            <div class="body">
+                <div class="hand hand-left"></div>
+                <div class="hand hand-right"></div>
+            </div>
+            <div class="foot foot-left"></div>
+            <div class="foot foot-right"></div>
+        </div>
     </div>
-    <div class="eye eye-right">
-        <div class="eye-inner"></div>
-    </div>
+
 
     <script>
         const container = document.querySelector('.container');
@@ -22,7 +43,7 @@
 
         const eyes = document.querySelectorAll('.eye');
 
-        [].forEach.call(eyes, function(eye) {});
+        [].forEach.call(eyes, function (eye) {});
 
 
         const container = document.querySelector('.container');
@@ -30,7 +51,7 @@
         container.addEventListener('mousemove', e => {
             const eyes = document.querySelectorAll('.eye');
 
-            [].forEach.call(eyes, function(eye) {
+            [].forEach.call(eyes, function (eye) {
                 // Mouse position on x-axis
                 let mouseX = eye.getBoundingClientRect().right;
                 // Left eye offset in place of right eye
@@ -43,15 +64,13 @@
                 // Calculate the radian value of the offset between the mouse and the eye
                 let radianDegrees = Math.atan2(e.pageX - mouseX, e.pageY - mouseY);
                 // Convert to degree value to use in CSS
-                let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 +180;
+                let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 180;
                 // Assign degrees to eye
                 eye.style.transform = `rotate(${rotationDegrees}deg)`;
             });
         });
-
-
-
     </script>
 
 </body>
+
 </html>
