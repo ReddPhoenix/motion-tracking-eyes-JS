@@ -36,26 +36,18 @@
 
 
     <script>
-        const container = document.querySelector('.container');
-        container.addEventListener('mousemove', e => {
+        const container = document.querySelector(".container");
+
+        container.addEventListener("mousemove", (e) => {
             // Mouse is moving on screen
-        });
 
-        const eyes = document.querySelectorAll('.eye');
-
-        [].forEach.call(eyes, function (eye) {});
-
-
-        const container = document.querySelector('.container');
-
-        container.addEventListener('mousemove', e => {
-            const eyes = document.querySelectorAll('.eye');
+            const eyes = document.querySelectorAll(".eye");
 
             [].forEach.call(eyes, function (eye) {
                 // Mouse position on x-axis
                 let mouseX = eye.getBoundingClientRect().right;
                 // Left eye offset in place of right eye
-                if (eye.classList.contains('eye-left')) {
+                if (eye.classList.contains("eye-left")) {
                     mouseX = eye.getBoundingClientRect().left;
                 }
 
@@ -69,6 +61,7 @@
                 eye.style.transform = `rotate(${rotationDegrees}deg)`;
             });
         });
+
     </script>
 
 </body>
