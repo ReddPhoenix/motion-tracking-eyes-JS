@@ -3,6 +3,7 @@
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT?style=plastic)
   [![Top Language](https://img.shields.io/github/languages/top/reddphoenix/motion-tracking-eyes-JS?style=plastic)](https://img.shields.io/github/languages/top/reddphoenix/motion-tracking-eyes-JS)
+  [![Second Language](https://img.shields.io/badge/javascript-32.7%25-blue?style=plastic)](https://img.shields.io/badge/javascript-32.7%25-blue?style=plastic)
  
 
   ## **Table of Contents**
