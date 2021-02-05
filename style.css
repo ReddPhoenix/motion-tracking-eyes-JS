@@ -39,7 +39,7 @@
   .chicken .head .crown-p {
     width: 20px;
     height: 30px;
-    background: #fdf5ad;
+    background: #ee1313;
     position: absolute;
     border-radius: 50%;
     border: 3px solid #000;
@@ -48,7 +48,7 @@
     content: "";
     width: 20px;
     height: 40px;
-    background: #fdf5ad;
+    background: #fd0101;
     position: absolute;
     bottom: -2px;
     border-radius: 50%;
@@ -84,8 +84,8 @@
     height: 48px;
     position: absolute;
     bottom: 41px;
-    background: #fff;
-    border-radius: 50%;
+    /* background: #fff; */
+    background: linear-gradient(to bottom right, #eb0000 22%, #f7f7f7 100%);    border-radius: 50%;
   }
   .chicken .head .eye-left {
     left: 26px;
@@ -220,7 +220,8 @@
       border-radius: 50%;
       width: 40px;
       height: 40px;
-      background-color: black;
+      /* background-color: black; */
+      background: linear-gradient(to bottom left, #8100eb 22%, #5bf859 100%);
       border-radius: 50%;
       margin-left: 4px;
       margin-top: 4px;
